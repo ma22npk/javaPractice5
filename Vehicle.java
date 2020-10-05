@@ -1,5 +1,3 @@
-// Vehicleクラスを定義し、
-// CarクラスとBicycleクラスの共通部分をVehicleクラスに移動してください
 class Vehicle {
   private String name;
   private String color;
@@ -21,8 +19,8 @@ class Vehicle {
     this.color = color;
   }
   public void printData() {
-    System.out.println("名前：" + this.name);
-    System.out.println("色：" + this.color);
-    System.out.println("走行距離：" + this.distance + "km");
+    System.out.println("名前: " + this.name);
+    System.out.println("色: " + this.color);
+    System.out.println("走行距離: " + this.distance + " (km)");
   }
 }
