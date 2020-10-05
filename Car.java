@@ -1,15 +1,18 @@
 class Car extends Vehicle {
   private int fuel = 50;
 
+  // Carクラスのコンストラクタを定義し、
+  // superを用いてスーパークラスのコンストラクタを呼び出してください
+  Car(String name, String color) {
+    super(name, color);
+  }
+
   public int getFuel() {
     return this.fuel;
   }
 
-  // printDataメソッドを定義してください
   public void printData() {
-    System.out.println("名前：" + this.getName());
-    System.out.println("色：" + this.getColor());
-    System.out.println("走行距離：" + this.getDistance() + "km");
+    super.printData();
     System.out.println("ガソリン量：" + this.fuel + "L");
   }
 

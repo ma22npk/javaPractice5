@@ -12,13 +12,12 @@ class Main {
 
     System.out.println("【車の情報】");
     car.printData();
-    // 「ガソリン量：○○L」と出力している箇所を消してください
     System.out.println("-----------------");
     System.out.print("給油する量を入力してください：");
     int litre = scanner.nextInt();
     car.charge(litre);
 
-    System.out.println("-----------------");
+    System.out.println("=================");
     System.out.println("【自転車の情報】");
     bicycle.printData();
   }

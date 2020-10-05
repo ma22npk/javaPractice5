@@ -1,4 +1,7 @@
-// Vehicleクラスを継承してください
 class Bicycle extends Vehicle {
-  // 以下のコードをVehicleクラスに移動してください
+  // Bicycleクラスのコンストラクタを定義し、
+  // superを用いてスーパークラスのコンストラクタを呼び出してください
+  Bicycle(String name, String color) {
+    super(name, color);
+  }
 }
