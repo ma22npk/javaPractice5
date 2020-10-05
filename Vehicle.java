@@ -1,8 +1,9 @@
-class Vehicle {
+abstract class Vehicle {
   private String name;
   private String color;
-  // protectedを用いて書き換えてください
   protected int distance = 0;
+  // インスタンスフィールドownerを定義してください
+  private Person owner;
 
   Vehicle(String name, String color) {
     this.name = name;
@@ -21,6 +22,11 @@ class Vehicle {
     return this.distance;
   }
 
+  // ownerフィールドのゲッターを定義してください
+  public Person getOwner() {
+    return this.owner;
+  }
+
   public void setName(String name) {
     this.name = name;
   }
@@ -29,9 +35,16 @@ class Vehicle {
     this.color = color;
   }
 
-  public void printData() {
-    System.out.println("名前: " + this.name);
-    System.out.println("色: " + this.color);
-    System.out.println("走行距離: " + this.distance + " (km)");
+  // ownerフィールドのセッターを定義してください
+  public void setOwner(Person person) {
+    this.owner = person;
   }
+
+  public void printData() {
+    System.out.println("名前：" + this.name);
+    System.out.println("色：" + this.color);
+    System.out.println("走行距離：" + this.distance + "km");
+  }
+
+  abstract public void run(int distance);
 }
